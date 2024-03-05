@@ -1,0 +1,20 @@
+{
+	"name": "Ds_jsonconfig009",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BlobConnection002",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "HttpLookup.json",
+				"container": "configfiles"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

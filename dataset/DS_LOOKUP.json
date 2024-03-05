@@ -1,0 +1,33 @@
+{
+	"name": "DS_LOOKUP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLSConnection002",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "HttpLookup.json",
+				"fileSystem": "refined"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"BaseURL": {
+					"type": "string"
+				},
+				"RelativeURL": {
+					"type": "string"
+				},
+				"FileName": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

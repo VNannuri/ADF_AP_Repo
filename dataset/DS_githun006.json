@@ -1,0 +1,40 @@
+{
+	"name": "DS_githun006",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_hhttpgithub006",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"baseURL": {
+					"value": "@dataset().Baseurl",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"Baseurl": {
+				"type": "string"
+			},
+			"Relativeurl": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().Relativeurl",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
